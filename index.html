@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?version=1.1">
+    <link rel="icon" type="image/jpeg" href="./Media.jpg">
 </head>
 
 <body>
@@ -18,7 +19,11 @@
     <div class="blob blob-2"></div>
 
     <nav class="glass-nav">
-        <div class="logo">PORTFOLIO</div>
+        <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+            <img src="./Media.jpg" alt="Profile Logo"
+                style="height: 38px; width: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-purple);">
+            PORTFOLIO
+        </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
