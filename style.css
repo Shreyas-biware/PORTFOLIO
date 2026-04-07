@@ -1,237 +1,732 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyas Chandrakant Biware | Portfolio</title>
-    <meta name="description"
-        content="Portfolio of Shreyas Chandrakant Biware, B.Tech IT Student '27 at NMIMS University.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?version=1.1">
-    <link rel="icon" type="image/jpeg" href="./Media.jpg">
-</head>
+:root {
+    --bg-color: #06060d;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.55);
+    --accent-cyan: #00f0ff;
+    --accent-purple: #9b6bff;
+    --accent-pink: #ff6bb1;
+    --accent-teal: #3be7c0;
+    --accent-orange: #ff9a3c;
+    --nav-height: 100px;
+    --container-width: 1200px;
+}
 
-<body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+html {
+    font-size: 120%; /* Compensates for the naturally compact rendering of Times New Roman */
+    scroll-behavior: smooth;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(1200px 800px at 10% 10%, rgba(155,107,255,0.06), transparent 15%), radial-gradient(1000px 700px at 90% 80%, rgba(0,240,255,0.06), transparent 18%);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
 
-    <nav class="glass-nav">
-        <div class="logo" style="display: flex; align-items: center; gap: 12px;">
-            <img src="./Media.jpg" alt="Profile Logo"
-                style="height: 38px; width: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-purple);">
-            PORTFOLIO
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="burger" id="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
+body {
+    position: relative;
+    overflow-x: hidden;
+}
 
-    <main>
-        <section id="home" class="hero section-padding">
-            <div class="hero-content">
-                <div class="greeting">👋 Hi, I'm</div>
-                <h1 class="header-name">Shreyas Biware</h1>
-                <h2 class="role">Aspiring Software Developer & UI/UX Designer | Tech Enthusiast</h2>
-                <p class="summary">I am a B.Tech Information Technology student at NMIMS University, driven by
-                    creativity and innovation to design intuitive user experiences, build efficient software solutions,
-                    and lead ideas into impactful outcomes.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn primary-btn">View My Work</a>
-                    <a href="RESUME%20SHREYAS.pdf" class="btn secondary-btn" download>Download Resume</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-container">
-                    <img src="./Media.jpg" alt="Shreyas Chandrakant Biware Avatar" class="profile-rect">
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span>Scroll Down</span>
-                <div class="arrow">↓</div>
-            </div>
-        </section>
+/* Background Blobs (Dynamic Design) */
+.blob {
+    position: absolute;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 50%;
+    animation: float 10s ease-in-out infinite alternate;
+}
 
-        <section id="about" class="about section-padding hidden">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content glass">
-                <p style="margin-bottom: 20px;">I am a B.Tech Information Technology student at NMIMS University with a
-                    strong passion for technology, design, and innovation. I enjoy designing intuitive user experiences
-                    and developing efficient, user-friendly software solutions that solve real-world problems.</p>
-                <p style="margin-bottom: 20px;">I am driven by continuous learning and a desire to grow, constantly
-                    exploring new technologies to stay ahead in the evolving tech landscape. With a creative mindset,
-                    strong problem-solving skills, and leadership qualities, I aim to transform ideas into impactful
-                    digital experiences.</p>
-                <p>My goal is to grow as a software developer and UI/UX designer while contributing to innovative
-                    projects that create meaningful impact.</p>
-            </div>
-        </section>
+.blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, rgba(155,107,255,0.9) 0%, rgba(99,107,241,0.6) 30%, transparent 70%);
+}
 
-        <section id="skills" class="skills section-padding hidden">
-            <h2 class="section-title">Core Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category glass">
-                    <div class="skill-icon"></div>
-                    <h3>Technical Skills</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-label">Programming:</span> Java, Python</li>
-                        <li><span class="skill-label">Web Dev:</span> HTML, CSS, JavaScript</li>
-                        <li><span class="skill-label">Database:</span> MySQL, DBMS</li>
-                        <li><span class="skill-label">Core/Other:</span> DSA, Fundamentals of Machine Learning</li>
-                        <li><span class="skill-label">Tools:</span> Power BI, Tableau</li>
-                    </ul>
-                </div>
-                <div class="skill-category glass">
-                    <div class="skill-icon"></div>
-                    <h3>UI/UX & Design</h3>
-                    <ul class="skill-list unstyled">
-                        <li>Figma & Wireframing</li>
-                        <li>Prototyping</li>
-                        <li>User-Centered Design</li>
-                        <li>Usability Principles</li>
-                    </ul>
-                </div>
-                <div class="skill-category glass">
-                    <div class="skill-icon"></div>
-                    <h3>Soft Skills</h3>
-                    <ul class="skill-list unstyled">
-                        <li>Leadership & Team Management</li>
-                        <li>Strong English Communication</li>
-                        <li>Coordination & Event Handling</li>
-                        <li>Adaptability</li>
-                        <li>Class Representative</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+.blob-2 {
+    bottom: 20%;
+    right: -10%;
+    width: 30vw;
+    height: 30vw;
+    background: radial-gradient(circle, rgba(0,240,255,0.9) 0%, rgba(59,231,192,0.5) 40%, transparent 70%);
+    animation-delay: -5s;
+}
 
-        <section id="projects" class="projects section-padding hidden">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card glass hover-lift">
-                    <div class="project-header">
-                        <span class="project-year">2025</span>
-                    </div>
-                    <h3>CPU Scheduling Simulator</h3>
-                    <p class="tag cyan-tag">Operating Systems</p>
-                    <p>Implemented FCFS and Priority Scheduling algorithms with Gantt Chart visualization using HTML,
-                        CSS, and JavaScript.</p>
-                </div>
-                <div class="project-card glass hover-lift">
-                    <div class="project-header">
-                        <span class="project-year">2024</span>
-                    </div>
-                    <h3>ATM Machine Simulation</h3>
-                    <p class="tag purple-tag">Data Structures / Java</p>
-                    <p>Built a Java-based ATM system using Arrays and Array List for account management and transaction
-                        processing.</p>
-                </div>
-                <div class="project-card glass hover-lift">
-                    <div class="project-header">
-                        <span class="project-year">2025</span>
-                    </div>
-                    <h3>Hairstyle Predictor App</h3>
-                    <p class="tag pink-tag">UI/UX & HCI</p>
-                    <p>Designed a mobile app UI and interactive prototype in Figma following user-centered design
-                        principles.</p>
-                </div>
-                <div class="project-card glass hover-lift">
-                    <div class="project-header">
-                        <span class="project-year">2025</span>
-                    </div>
-                    <h3>Pizza Sales Data Dashboard</h3>
-                    <p class="tag blue-tag">Power BI / Data Analysis</p>
-                    <p>Created an interactive Power BI dashboard using DAX and data modelling to analyse sales
-                        performance and revenue trends.</p>
-                </div>
-            </div>
-        </section>
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
+}
 
-        <section id="achievements" class="achievements section-padding hidden">
-            <h2 class="section-title">Qualifications</h2>
-            <div class="achievements-container">
-                <div class="achievement-card glass">
-                    <div class="achievement-icon"></div>
-                    <div class="achievement-content">
-                        <h3>Java Full Stack Development <span class="ongoing">(Ongoing, 2025)</span></h3>
-                        <p>Comprehensive certification covering Java, Spring Boot, MySQL, HTML, CSS, and JavaScript with
-                            a focus on robust backend development and seamless database integration.</p>
-                    </div>
-                </div>
-                <div class="achievement-card glass">
-                    <div class="achievement-icon"></div>
-                    <div class="achievement-content">
-                        <h3>Positions of Responsibility</h3>
-                        <ul class="roles-list">
-                            <li><strong>CLASS REPRESENTATIVE</strong> at NMIMS</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+/* Utility Classes */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 16px;
+}
 
-        <section id="contact" class="contact section-padding hidden">
-            <h2 class="section-title" style="font-family: 'Times New Roman', Times, serif;">Contact</h2>
-            <div class="contact-box glass">
-                <p style="margin-bottom: 20px;">I am open to opportunities for academic collaboration, project
-                    discussions, internships, and professional communication. Feel free to reach out using the details
-                    below.</p>
-                <ul style="list-style: none; padding: 0; margin-bottom: 20px;">
-                    <li><strong>Email:</strong> <a href="mailto:shreyasbiware@gmail.com"
-                            style="color: var(--accent-blue); text-decoration: none;">shreyasbiware@gmail.com</a></li>
-                    <li><strong>Location:</strong> Ujjain, Madhya Pradesh, India</li>
-                </ul>
-                <p style="margin-bottom: 20px;">You can also connect with me on professional platforms for networking
-                    and opportunities.</p>
-                <div style="display: flex; gap: 24px; align-items: center; margin-bottom: 20px;">
-                    <a href="https://github.com/Shreyas-biware" target="_blank"
-                        style="display: flex; align-items: center; gap: 8px; color: var(--text-primary); text-decoration: none; font-family: 'Times New Roman', Times, serif; font-weight: 500;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/shreyas-biware-28a33b327" target="_blank"
-                        style="display: flex; align-items: center; gap: 8px; color: var(--text-primary); text-decoration: none; font-family: 'Times New Roman', Times, serif; font-weight: 500;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                        LinkedIn
-                    </a>
-                    <a href="https://instagram.com/heyshreyas._" target="_blank"
-                        style="display: flex; align-items: center; gap: 8px; color: var(--text-primary); text-decoration: none; font-family: 'Times New Roman', Times, serif; font-weight: 500;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                        </svg>
-                        Instagram
-                    </a>
-                </div>
-                <p>I am always eager to learn, collaborate, and explore new opportunities.</p>
-            </div>
-        </section>
-    </main>
+.section-padding {
+    padding: 100px 20px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
 
-    <footer class="glass-footer">
-        <div class="footer-content">
-            <div class="footer-logo">PORTFOLIO</div>
-            <p>&copy; 2026 Shreyas Chandrakant Biware</p>
-        </div>
-    </footer>
+.section-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    <script src="script.js"></script>
-</body>
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
 
-</html>
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navigation */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000;
+    background: linear-gradient(90deg, rgba(6,6,13,0.75), rgba(12,8,28,0.45));
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    right: -10px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-cyan);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--accent-cyan);
+    text-shadow: 0 0 15px var(--accent-cyan);
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-purple);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::before {
+    width: 100%;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: var(--text-primary);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--nav-height);
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.greeting {
+    color: var(--text-primary);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.header-name {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    animation: nameGlow 4s ease-in-out infinite;
+}
+
+@keyframes nameGlow {
+    0% { text-shadow: 0 0 6px rgba(155,107,255,0.08); }
+    50% { text-shadow: 0 0 26px rgba(155,107,255,0.2), 0 0 18px rgba(255,107,177,0.1); }
+    100% { text-shadow: 0 0 6px rgba(155,107,255,0.08); }
+}
+
+.role {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.role span {
+    color: var(--accent-purple);
+    font-weight: 600;
+}
+
+.summary {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin-bottom: 40px;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    white-space: nowrap;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-orange));
+    color: var(--text-primary);
+    border: none;
+    box-shadow: 0 8px 30px rgba(255,107,177,0.3), 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255,154,60,0.4);
+}
+
+.secondary-btn {
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--accent-cyan);
+    box-shadow: 0 0 10px rgba(0,240,255,0.2);
+    backdrop-filter: blur(8px);
+}
+
+.secondary-btn:hover {
+    background: rgba(0,240,255,0.1);
+    box-shadow: 0 0 20px rgba(0,240,255,0.6);
+    border-color: var(--accent-cyan);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    margin: 0 auto;
+    z-index: 10;
+    border-radius: 20px;
+    padding: 5px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
+    box-shadow: 0 10px 30px rgba(155, 107, 255, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.image-container:hover {
+    transform: scale(1.04) translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 240, 255, 0.5);
+}
+
+.profile-rect {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Slightly smaller to fit edge cleanly */
+    border: 3px solid var(--bg-color); /* Separates image from gradient */
+}
+
+/* Floating Image */
+.parallax-img {
+    animation: floatImage 5s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator .arrow {
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+    40% { transform: translateY(-10px) translateX(-50%); }
+    60% { transform: translateY(-5px) translateX(-50%); }
+}
+
+/* Timeline (Education) */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--glass-border);
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 30px;
+    margin-bottom: 2rem;
+    position: relative;
+    margin-left: 50px;
+    border-left: 4px solid var(--accent-teal);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: var(--accent-teal);
+    border-radius: 50%;
+    left: -60px;
+    top: 35px;
+    box-shadow: 0 0 12px var(--accent-teal);
+}
+
+.timeline-date {
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--accent-purple);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.highlight-text {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(59, 231, 192, 0.12); /* Teal tint */
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--accent-teal);
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 10px;
+}
+
+.skill-list {
+    list-style: none;
+}
+
+.skill-list li {
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+}
+
+.skill-label {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.unstyled li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.unstyled li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-cyan);
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+}
+
+.hover-lift {
+    transform: perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1);
+}
+
+.hover-lift:hover {
+    transform: perspective(1000px) translateY(-10px) scale3d(1.02, 1.02, 1.02);
+    border-color: rgba(155, 107, 255, 0.35); /* Glow using new purple */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(155, 107, 255, 0.15);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.project-year {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.project-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.cyan-tag { background: rgba(0, 240, 255, 0.15); color: var(--accent-cyan); border: 1px solid rgba(0, 240, 255, 0.3); }
+.purple-tag { background: rgba(155, 107, 255, 0.15); color: var(--accent-purple); border: 1px solid rgba(155, 107, 255, 0.3); }
+.pink-tag { background: rgba(255, 107, 177, 0.15); color: var(--accent-pink); border: 1px solid rgba(255, 107, 177, 0.3); }
+.blue-tag { background: rgba(59, 231, 192, 0.15); color: var(--accent-teal); border: 1px solid rgba(59, 231, 192, 0.3); }
+
+.project-card p:last-child {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1.15rem;
+}
+
+/* Achievements */
+.achievements-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.achievement-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 20px;
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.achievement-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.ongoing {
+    font-size: 1.1rem;
+    color: var(--accent-cyan);
+    font-weight: 400;
+}
+
+.achievement-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 1.15rem;
+}
+
+.roles-list {
+    list-style: none;
+}
+
+.roles-list li {
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 20px;
+    font-size: 1.25rem;
+}
+
+.roles-list li::before {
+    content: '◇';
+    position: absolute;
+    left: 0;
+    color: var(--accent-purple);
+}
+
+.roles-list strong {
+    color: #fff;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+}
+
+.contact-box {
+    padding: 60px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-box h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact-box p {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    line-height: 1.7;
+    font-size: 1.25rem;
+}
+
+.glow {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+/* Footer */
+.glass-footer {
+    border-top: 1px solid var(--glass-border);
+    padding: 30px 0;
+    text-align: center;
+    background: rgba(5, 5, 17, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.footer-logo {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.footer-content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: var(--nav-height);
+        flex-direction: column;
+        background: rgba(5, 5, 17, 0.95);
+        backdrop-filter: blur(16px);
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        align-items: center;
+        justify-content: center;
+        transition: right 0.5s ease;
+    }
+
+    .nav-links.nav-active {
+        right: 0;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding-top: 120px;
+    }
+    
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+    
+    .timeline-item {
+        margin-left: 20px;
+    }
+    
+    .timeline-item::before {
+        left: -30px;
+    }
+    
+    .achievement-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Burger Animation */
+.toggle .line1 { transform: rotate(-45deg) translate(-5px, 5px); }
+.toggle .line2 { opacity: 0; }
+.toggle .line3 { transform: rotate(45deg) translate(-5px, -5px); }
