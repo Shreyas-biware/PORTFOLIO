@@ -370,6 +370,17 @@ body {
     60% { transform: translateY(-5px) translateX(-50%); }
 }
 
+/* About Section */
+.about-content {
+    padding: 30px;
+}
+
+.about-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
 /* Timeline (Education) */
 .timeline {
     position: relative;
