@@ -4,233 +4,611 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyas Chandrakant Biware | Portfolio</title>
+    <title>Shreyas Chandrakant Biware | Developer & Tech Specialist</title>
     <meta name="description"
-        content="Portfolio of Shreyas Chandrakant Biware, B.Tech IT Student '27 at NMIMS University.">
+        content="Portfolio of Shreyas Chandrakant Biware, B.Tech IT Student '27 at NMIMS University specializing in Java, ML, Analytics, and UI/UX Design.">
+    <meta name="keywords" content="Shreyas Biware, Shreyas Chandrakant Biware, NMIMS, MPSTME, Software Developer, Java, Machine Learning, Power BI, Portfolio">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Shreyas Chandrakant Biware | Portfolio">
+    <meta property="og:description" content="Explore projects, internships, education, and technical skills of Shreyas Biware.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?version=1.1">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css?v=2.0">
     <link rel="icon" type="image/jpeg" href="./Media.jpg">
 </head>
 
 <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
 
-    <nav class="glass-nav">
-        <div class="logo" style="display: flex; align-items: center; gap: 12px;">
-            <img src="./Media.jpg" alt="Profile Logo"
-                style="height: 38px; width: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-purple);">
-            PORTFOLIO
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="burger" id="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+    <!-- Ambient Glowing Background Grid -->
+    <div class="ambient-bg">
+        <div class="ambient-glow-1"></div>
+        <div class="ambient-glow-2"></div>
+        <div class="ambient-grid"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-badge">SB</span>
+                <span>Shreyas<span class="gradient-text">.dev</span></span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About & Edu</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="RESUME%20SHREYAS.pdf" class="btn btn-secondary btn-sm" download>
+                    <i class="fa-solid fa-download"></i> Resume PDF
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
+    <!-- Main Content -->
     <main>
-        <section id="home" class="hero section-padding">
-            <div class="hero-content">
-                <div class="greeting">👋 Hi, I'm</div>
-                <h1 class="header-name">Shreyas Biware</h1>
-                <h2 class="role">Aspiring Software Developer & UI/UX Designer | Tech Enthusiast</h2>
-                <p class="summary">I am a B.Tech Information Technology student at NMIMS University, driven by
-                    creativity and innovation to design intuitive user experiences, build efficient software solutions,
-                    and lead ideas into impactful outcomes.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn primary-btn">View My Work</a>
-                    <a href="RESUME%20SHREYAS.pdf" class="btn secondary-btn" download>Download Resume</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-container">
-                    <img src="./Media.jpg" alt="Shreyas Chandrakant Biware Avatar" class="profile-rect">
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span>Scroll Down</span>
-                <div class="arrow">↓</div>
-            </div>
-        </section>
+        <!-- Hero Section -->
+        <section id="home" class="hero section-container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Open for Internships & Opportunities</span>
+                    </div>
 
-        <section id="about" class="about section-padding hidden">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content glass">
-                <p style="margin-bottom: 45px;">I am a B.Tech Information Technology student at NMIMS University with a
-                    strong passion for technology, design, and innovation. I enjoy designing intuitive user experiences
-                    and developing efficient, user-friendly software solutions that solve real-world problems.</p>
-                <p style="margin-bottom: 45px;">I am driven by continuous learning and a desire to grow, constantly
-                    exploring new technologies to stay ahead in the evolving tech landscape. With a creative mindset,
-                    strong problem-solving skills, and leadership qualities, I aim to transform ideas into impactful
-                    digital experiences.</p>
-                <p>My goal is to grow as a software developer and UI/UX designer while contributing to innovative
-                    projects that create meaningful impact.</p>
-            </div>
-        </section>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Shreyas Biware</span>
+                    </h1>
 
-        <section id="skills" class="skills section-padding hidden">
-            <h2 class="section-title">Core Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category glass">
-                    <div class="skill-icon"></div>
-                    <h3>Technical Skills</h3>
-                    <ul class="skill-list">
-                        <li><span class="skill-label">Programming:</span> Java, Python</li>
-                        <li><span class="skill-label">Web Dev:</span> HTML, CSS, JavaScript</li>
-                        <li><span class="skill-label">Database:</span> MySQL, DBMS</li>
-                        <li><span class="skill-label">Core/Other:</span> DSA, Fundamentals of Machine Learning</li>
-                        <li><span class="skill-label">Tools:</span> Power BI, Tableau</li>
-                    </ul>
-                </div>
-                <div class="skill-category glass">
-                    <div class="skill-icon"></div>
-                    <h3>UI/UX & Design</h3>
-                    <ul class="skill-list unstyled">
-                        <li>Figma & Wireframing</li>
-                        <li>Prototyping</li>
-                        <li>User-Centered Design</li>
-                        <li>Usability Principles</li>
-                    </ul>
-                </div>
-                <div class="skill-category glass">
-                    <div class="skill-icon"></div>
-                    <h3>Soft Skills</h3>
-                    <ul class="skill-list unstyled">
-                        <li>Leadership & Team Management</li>
-                        <li>Strong English Communication</li>
-                        <li>Coordination & Event Handling</li>
-                        <li>Adaptability</li>
-                        <li>Class Representative</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+                    <h2 class="hero-subtitle">
+                        B.Tech IT '27 @ NMIMS | <span class="typing-highlight" id="typing-text">Full-Stack & ML Explorer</span>
+                    </h2>
 
-        <section id="projects" class="projects section-padding hidden">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card glass hover-lift">
-                    <div class="project-header">
-                        <span class="project-year">2025</span>
+                    <p class="hero-description">
+                        Passionate Information Technology student building intelligent full-stack solutions, data models, and user-centric interfaces. Experienced in Java, Machine Learning, Power BI analytics, and mobile app design.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore Projects <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Get In Touch
+                        </a>
                     </div>
-                    <h3>CPU Scheduling Simulator</h3>
-                    <p class="tag cyan-tag">Operating Systems</p>
-                    <p>Implemented FCFS and Priority Scheduling algorithms with Gantt Chart visualization using HTML,
-                        CSS, and JavaScript.</p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number gradient-text" data-target="5">5+</span>
+                            <span class="stat-label">Core Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number gradient-text" data-target="2">2</span>
+                            <span class="stat-label">Internships</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number gradient-text">7.10</span>
+                            <span class="stat-label">NMIMS CGPA</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card glass hover-lift">
-                    <div class="project-header">
-                        <span class="project-year">2024</span>
+
+                <div class="hero-visual">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-img-container">
+                            <img src="./Media.jpg" alt="Shreyas Chandrakant Biware" class="profile-avatar">
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div class="floating-badge badge-1">
+                            <div class="badge-icon" style="color: var(--accent-cyan);">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div>
+                                <div class="badge-text-primary">Java & Python</div>
+                                <div class="badge-text-secondary">Core Developer</div>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-2">
+                            <div class="badge-icon" style="color: var(--secondary);">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <div>
+                                <div class="badge-text-primary">95%+ ML Model</div>
+                                <div class="badge-text-secondary">Classification Accuracy</div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>ATM Machine Simulation</h3>
-                    <p class="tag purple-tag">Data Structures / Java</p>
-                    <p>Built a Java-based ATM system using Arrays and Array List for account management and transaction
-                        processing.</p>
-                </div>
-                <div class="project-card glass hover-lift">
-                    <div class="project-header">
-                        <span class="project-year">2025</span>
-                    </div>
-                    <h3>Hairstyle Predictor App</h3>
-                    <p class="tag pink-tag">UI/UX & HCI</p>
-                    <p>Designed a mobile app UI and interactive prototype in Figma following user-centered design
-                        principles.</p>
-                </div>
-                <div class="project-card glass hover-lift">
-                    <div class="project-header">
-                        <span class="project-year">2025</span>
-                    </div>
-                    <h3>Pizza Sales Data Dashboard</h3>
-                    <p class="tag blue-tag">Power BI / Data Analysis</p>
-                    <p>Created an interactive Power BI dashboard using DAX and data modelling to analyse sales
-                        performance and revenue trends.</p>
                 </div>
             </div>
         </section>
 
-        <section id="achievements" class="achievements section-padding hidden">
-            <h2 class="section-title">Qualifications</h2>
-            <div class="achievements-container">
-                <div class="achievement-card glass">
-                    <div class="achievement-icon"></div>
-                    <div class="achievement-content">
-                        <h3>Java Full Stack Development <span class="ongoing">(Ongoing, 2025)</span></h3>
-                        <p>Comprehensive certification covering Java, Spring Boot, MySQL, HTML, CSS, and JavaScript with
-                            a focus on robust backend development and seamless database integration.</p>
+        <!-- About & Education Section -->
+        <section id="about" class="section-container hidden-element">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-user-graduate"></i> Foundation</span>
+                <h2 class="section-title">About Me & <span class="gradient-text">Education</span></h2>
+                <p class="section-subtitle">A quick snapshot of my academic journey and passion for technology.</p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Bio Card -->
+                <div class="glass-card about-bio-card">
+                    <div>
+                        <h3 class="timeline-title" style="font-size: 1.4rem; margin-bottom: 16px;">
+                            Engineering the Future with <span class="gradient-text-cyan">Code & Design</span>
+                        </h3>
+                        <p>
+                            I am a B.Tech Information Technology student at MPSTME, NMIMS University with a strong background in software engineering, machine learning, and data analytics.
+                        </p>
+                        <p>
+                            From engineering full-stack Android applications with Firebase to analyzing large-scale datasets with Power BI and building ML models on 27,000+ records, I love solving real-world challenges through technology.
+                        </p>
+                    </div>
+
+                    <div class="quick-details">
+                        <div class="detail-item">
+                            <span>Email</span>
+                            <span>shreyasbiware@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Location</span>
+                            <span>Mumbai / Ujjain, India</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Degree</span>
+                            <span>B.Tech IT (2023 - 2027)</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>Live Site</span>
+                            <span>shreyasbiware.vercel.app</span>
+                        </div>
                     </div>
                 </div>
-                <div class="achievement-card glass">
-                    <div class="achievement-icon"></div>
-                    <div class="achievement-content">
-                        <h3>Positions of Responsibility</h3>
-                        <ul class="roles-list">
-                            <li><strong>CLASS REPRESENTATIVE</strong> at NMIMS</li>
+
+                <!-- Education Timeline -->
+                <div class="timeline">
+                    <!-- Education 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">MPSTME, NMIMS University</h3>
+                                <span class="timeline-period">2023 – 2027</span>
+                            </div>
+                            <div class="timeline-subtitle">B.Tech in Information Technology</div>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">Focusing on Data Structures & Algorithms, Java Software Engineering, Database Systems, and Applied ML.</p>
+                            <span class="timeline-grade"><i class="fa-solid fa-star"></i> CGPA: 7.10 / 10</span>
+                        </div>
+                    </div>
+
+                    <!-- Education 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Vinay Adarsh Higher Sec. School</h3>
+                                <span class="timeline-period">2022 – 2023</span>
+                            </div>
+                            <div class="timeline-subtitle">Higher Secondary Certificate (HSC) - Ujjain</div>
+                            <span class="timeline-grade"><i class="fa-solid fa-award"></i> HSC Score: 75.4%</span>
+                        </div>
+                    </div>
+
+                    <!-- Education 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">St. Paul's Convent Sen. Sec. School</h3>
+                                <span class="timeline-period">2019 – 2020</span>
+                            </div>
+                            <div class="timeline-subtitle">CBSE (Class X) - Ujjain</div>
+                            <span class="timeline-grade"><i class="fa-solid fa-check"></i> Score: 68%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience / Internships Section -->
+        <section id="experience" class="section-container hidden-element">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Experience</span>
+                <h2 class="section-title">Industry <span class="gradient-text">Internships</span></h2>
+                <p class="section-subtitle">Hands-on practical experience in machine learning and digital marketing.</p>
+            </div>
+
+            <div class="experience-grid">
+                <!-- Internship 1 -->
+                <div class="glass-card experience-card">
+                    <div>
+                        <div class="experience-badge">
+                            <i class="fa-solid fa-laptop-code"></i> Virtual Internship (2026)
+                        </div>
+                        <h3>Machine Learning Intern</h3>
+                        <div class="experience-company">CodSoft</div>
+                        <ul>
+                            <li>Completed an intensive 1-month Machine Learning internship, developing predictive models using Python and scikit-learn.</li>
+                            <li>Executed full ML lifecycles: raw data preprocessing, feature engineering, model evaluation, and optimization.</li>
+                            <li>Evaluated classification algorithms on real-world datasets with comprehensive performance metrics.</li>
                         </ul>
                     </div>
+                    <div class="internship-id">
+                        <i class="fa-solid fa-id-card"></i> Internship ID: BY26RY203689
+                    </div>
+                </div>
+
+                <!-- Internship 2 -->
+                <div class="glass-card experience-card">
+                    <div>
+                        <div class="experience-badge" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+                            <i class="fa-solid fa-bullhorn"></i> Summer Program (2026)
+                        </div>
+                        <h3>Marketing Intern</h3>
+                        <div class="experience-company">Connect Karo</div>
+                        <ul>
+                            <li>Selected for an 8-week Summer Internship Program managing digital outreach and social media growth strategies.</li>
+                            <li>Planned and executed targeted marketing campaigns to increase user engagement and brand visibility.</li>
+                            <li>Designed high-impact visual media content and optimized campaign communication flows.</li>
+                        </ul>
+                    </div>
+                    <div class="internship-id">
+                        <i class="fa-solid fa-calendar-check"></i> Duration: 8 Weeks
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact section-padding hidden">
-            <h2 class="section-title" style="font-family: 'Times New Roman', Times, serif;">Contact</h2>
-            <div class="contact-box glass">
-                <p style="margin-bottom: 20px;">I am open to opportunities for academic collaboration, project
-                    discussions, internships, and professional communication. Feel free to reach out using the details
-                    below.</p>
-                <ul style="list-style: none; padding: 0; margin-bottom: 20px;">
-                    <li><strong>Email:</strong> <a href="mailto:shreyasbiware@gmail.com"
-                            style="color: var(--accent-blue); text-decoration: none;">shreyasbiware@gmail.com</a></li>
-                    <li><strong>Location:</strong> Ujjain, Madhya Pradesh, India</li>
-                </ul>
-                <p style="margin-bottom: 20px;">You can also connect with me on professional platforms for networking
-                    and opportunities.</p>
-                <div style="display: flex; gap: 24px; align-items: center; margin-bottom: 20px;">
-                    <a href="https://github.com/Shreyas-biware" target="_blank"
-                        style="display: flex; align-items: center; gap: 8px; color: var(--text-primary); text-decoration: none; font-family: 'Times New Roman', Times, serif; font-weight: 500;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
+        <!-- Featured Projects Section -->
+        <section id="projects" class="section-container hidden-element">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-diagram-project"></i> Portfolio</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Filterable technical projects across software engineering, machine learning, and data analytics.</p>
+            </div>
+
+            <!-- Tab Filters -->
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="android">Android & Java</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="data">Data & Power BI</button>
+                <button class="filter-btn" data-filter="design">UI/UX Design</button>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="projects-grid" id="projects-grid">
+
+                <!-- Project 1: MediSync -->
+                <div class="glass-card project-card" data-category="android">
+                    <div class="project-top">
+                        <span class="project-category-tag">Android / Full-Stack</span>
+                        <span class="project-year">2026</span>
+                    </div>
+                    <h3 class="project-title">MediSync</h3>
+                    <p class="project-desc">
+                        Engineered a full-stack Android application delivering 4+ core patient safety features — medication expiry alerts, dosage reminders, drug-interaction checks, and emergency contact support.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Android Studio</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Mental Health & Depression Predictor -->
+                <div class="glass-card project-card" data-category="ml">
+                    <div class="project-top">
+                        <span class="project-category-tag" style="background: rgba(168, 85, 247, 0.15); color: var(--secondary);">AI / Machine Learning</span>
+                        <span class="project-year">2026</span>
+                    </div>
+                    <h3 class="project-title">Mental Health & Depression Predictor</h3>
+                    <p class="project-desc">
+                        Built and evaluated a machine learning classification model on 27,900+ student health records, achieving 95%+ prediction accuracy for early depression-risk detection.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Classification</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Hairstyle Predictor App -->
+                <div class="glass-card project-card" data-category="design">
+                    <div class="project-top">
+                        <span class="project-category-tag" style="background: rgba(244, 63, 94, 0.15); color: var(--accent-pink);">UI/UX & Mobile</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3 class="project-title">Hairstyle Predictor App Prototype</h3>
+                    <p class="project-desc">
+                        Designed a comprehensive 10+ screen mobile app prototype applying user-centered HCI principles to recommend personalized hairstyles based on facial structure analysis.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">UI/UX Design</span>
+                        <span class="tech-tag">Wireframing</span>
+                        <span class="tech-tag">Prototyping</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Pizza Sales Analytics Dashboard -->
+                <div class="glass-card project-card" data-category="data">
+                    <div class="project-top">
+                        <span class="project-category-tag" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-gold);">Data Analytics</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h3 class="project-title">Pizza Sales Analytics Dashboard</h3>
+                    <p class="project-desc">
+                        Built an interactive Power BI analytics dashboard processing 10,000+ commercial sales records; created DAX data models surfacing key revenue trends and customer buying patterns.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">Data Modeling</span>
+                        <span class="tech-tag">Business Intelligence</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: ATM Machine Simulation -->
+                <div class="glass-card project-card" data-category="android">
+                    <div class="project-top">
+                        <span class="project-category-tag">Java / DSA</span>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <h3 class="project-title">ATM Machine Simulation System</h3>
+                    <p class="project-desc">
+                        Developed a robust Java-based ATM simulation supporting account authentication, deposits, withdrawals, and balance inquiries using Arrays and ArrayLists for efficient transaction management.
+                    </p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Data Structures</span>
+                        <span class="tech-tag">OOP Principles</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Technical & Soft Skills Section -->
+        <section id="skills" class="section-container hidden-element">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Capabilities</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skillset</span></h2>
+                <p class="section-subtitle">Core programming languages, frameworks, analytical tools, and soft skills.</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="glass-card skill-category-card">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-box"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="skill-category-title">Programming</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill"><i class="fa-brands fa-java" style="color: #f89820;"></i> Java</span>
+                        <span class="skill-pill"><i class="fa-brands fa-python" style="color: #3776ab;"></i> Python</span>
+                        <span class="skill-pill"><i class="fa-brands fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                        <span class="skill-pill"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML5</span>
+                        <span class="skill-pill"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i> CSS3</span>
+                        <span class="skill-pill"><i class="fa-solid fa-diagram-project" style="color: var(--accent-cyan);"></i> DSA</span>
+                    </div>
+                </div>
+
+                <!-- ML & Data Analytics -->
+                <div class="glass-card skill-category-card">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-box" style="background: rgba(168, 85, 247, 0.15); color: var(--secondary);"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 class="skill-category-title">Data & ML</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill"><i class="fa-solid fa-chart-column" style="color: #f2c811;"></i> Power BI</span>
+                        <span class="skill-pill"><i class="fa-solid fa-calculator" style="color: var(--accent-gold);"></i> DAX Modeling</span>
+                        <span class="skill-pill"><i class="fa-solid fa-brain" style="color: var(--secondary);"></i> scikit-learn</span>
+                        <span class="skill-pill"><i class="fa-solid fa-database" style="color: #00758f;"></i> MySQL</span>
+                        <span class="skill-pill"><i class="fa-solid fa-fire" style="color: #ffca28;"></i> Firebase</span>
+                    </div>
+                </div>
+
+                <!-- UI/UX & Tools -->
+                <div class="glass-card skill-category-card">
+                    <div class="skill-category-header">
+                        <div class="skill-icon-box" style="background: rgba(244, 63, 94, 0.15); color: var(--accent-pink);"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <h3 class="skill-category-title">Design & Tools</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill"><i class="fa-brands fa-figma" style="color: #f24e1e;"></i> Figma</span>
+                        <span class="skill-pill"><i class="fa-solid fa-mobile-screen" style="color: var(--accent-cyan);"></i> Mobile UI/UX</span>
+                        <span class="skill-pill"><i class="fa-solid fa-object-group" style="color: var(--accent-pink);"></i> Wireframing</span>
+                        <span class="skill-pill"><i class="fa-brands fa-git-alt" style="color: #f05032;"></i> Git & GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft Skills Section -->
+            <div class="glass-card soft-skills-container">
+                <h3 class="soft-skills-title">Professional Soft Skills</h3>
+                <div class="soft-skills-flex">
+                    <span class="soft-skill-badge"><i class="fa-solid fa-users"></i> Leadership & Team Management</span>
+                    <span class="soft-skill-badge"><i class="fa-solid fa-comments"></i> Communication</span>
+                    <span class="soft-skill-badge"><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+                    <span class="soft-skill-badge"><i class="fa-solid fa-sliders"></i> Adaptability</span>
+                    <span class="soft-skill-badge"><i class="fa-solid fa-calendar-check"></i> Coordination & Event Management</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Publications Section -->
+        <section id="certifications" class="section-container hidden-element">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-trophy"></i> Recognition</span>
+                <h2 class="section-title">Certifications & <span class="gradient-text">Hackathons</span></h2>
+                <p class="section-subtitle">National hackathons, industry challenges, and certifications.</p>
+            </div>
+
+            <div class="cert-grid">
+                <!-- Cert 1 -->
+                <div class="glass-card cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="cert-info">
+                        <h4>Tata Elxsi Teliport Season-3</h4>
+                        <div class="cert-issuer">Tata Elxsi National Challenge</div>
+                        <span class="cert-year">2026</span>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="glass-card cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="cert-info">
+                        <h4>GraphRAG Inference Hackathon</h4>
+                        <div class="cert-issuer">TigerGraph AI Challenge</div>
+                        <span class="cert-year">2026</span>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="glass-card cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="cert-info">
+                        <h4>CodeStrike-2026</h4>
+                        <div class="cert-issuer">National Coding Competition</div>
+                        <span class="cert-year">2026</span>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="glass-card cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="cert-info">
+                        <h4>Machine Learning with Python</h4>
+                        <div class="cert-issuer">LearnItUp Certification</div>
+                        <span class="cert-year">2026</span>
+                    </div>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="glass-card cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="cert-info">
+                        <h4>TensorX 2026 National AI Hackathon</h4>
+                        <div class="cert-issuer">Poonawalla Fincorp</div>
+                        <span class="cert-year">2026</span>
+                    </div>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="glass-card cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-bug"></i></div>
+                    <div class="cert-info">
+                        <h4>Yugantar Hackathon</h4>
+                        <div class="cert-issuer">Team Bug Busters</div>
+                        <span class="cert-year">2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership & Positions of Responsibility Section -->
+        <section id="leadership" class="section-container hidden-element">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-user-shield"></i> Leadership</span>
+                <h2 class="section-title">Positions of <span class="gradient-text">Responsibility</span></h2>
+                <p class="section-subtitle">Active roles in student government, technical fests, and campus clubs.</p>
+            </div>
+
+            <div class="leadership-grid">
+                <div class="glass-card leadership-card">
+                    <div class="leadership-icon"><i class="fa-solid fa-user-group"></i></div>
+                    <h3 class="leadership-title">Class Representative</h3>
+                    <div class="leadership-org">MPSTME, NMIMS</div>
+                </div>
+
+                <div class="glass-card leadership-card">
+                    <div class="leadership-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                    <h3 class="leadership-title">Social Media Marketing Head</h3>
+                    <div class="leadership-org">Finance Club, NMIMS</div>
+                </div>
+
+                <div class="glass-card leadership-card">
+                    <div class="leadership-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <h3 class="leadership-title">Associate Core (Logistics)</h3>
+                    <div class="leadership-org">Protsahan, NMIMS</div>
+                </div>
+
+                <div class="glass-card leadership-card">
+                    <div class="leadership-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3 class="leadership-title">Graphic Designer & Marketing</h3>
+                    <div class="leadership-org">Ambiora Techfest, NMIMS</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-container hidden-element">
+            <div class="glass-card contact-card-box">
+                <h2 class="contact-title">Let's Build Something <span class="gradient-text">Impactful</span></h2>
+                <p class="contact-text">
+                    I am actively seeking software development, machine learning, and data analytics internship opportunities. Feel free to reach out directly!
+                </p>
+
+                <div class="contact-methods">
+                    <div class="email-copy-wrapper" id="copy-email-btn" title="Click to copy email">
+                        <i class="fa-regular fa-envelope" style="color: var(--primary);"></i>
+                        <span id="email-text">shreyasbiware@gmail.com</span>
+                        <i class="fa-regular fa-copy" style="margin-left: 6px; font-size: 0.85rem;"></i>
+                    </div>
+                </div>
+
+                <div class="social-bar">
+                    <a href="https://linkedin.com/in/shreyas-biware" target="_blank" class="social-btn" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/shreyas-biware-28a33b327" target="_blank"
-                        style="display: flex; align-items: center; gap: 8px; color: var(--text-primary); text-decoration: none; font-family: 'Times New Roman', Times, serif; font-weight: 500;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
-                        LinkedIn
+                    <a href="mailto:shreyasbiware@gmail.com" class="social-btn" title="Send Email">
+                        <i class="fa-solid fa-envelope"></i>
                     </a>
-                    <a href="https://instagram.com/heyshreyas._" target="_blank"
-                        style="display: flex; align-items: center; gap: 8px; color: var(--text-primary); text-decoration: none; font-family: 'Times New Roman', Times, serif; font-weight: 500;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                        </svg>
-                        Instagram
+                    <a href="https://shreyasbiware.vercel.app" target="_blank" class="social-btn" title="Live Vercel Site">
+                        <i class="fa-solid fa-globe"></i>
                     </a>
                 </div>
-                <p>I am always eager to learn, collaborate, and explore new opportunities.</p>
             </div>
         </section>
     </main>
 
-    <footer class="glass-footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo">PORTFOLIO</div>
-            <p>&copy; 2026 Shreyas Chandrakant Biware</p>
+            <div class="logo" style="font-size: 1.1rem;">
+                <span class="logo-badge" style="width: 30px; height: 30px; font-size: 0.9rem;">SB</span>
+                <span>Shreyas Chandrakant Biware</span>
+            </div>
+            <p class="footer-text">
+                &copy; 2026 Shreyas Biware. All Rights Reserved. Built with HTML5, Vanilla CSS, & JavaScript.
+            </p>
         </div>
     </footer>
 
+    <!-- JavaScript Script -->
     <script src="script.js"></script>
 </body>
 
